@@ -1,9 +1,32 @@
 body {
   background-color: #c5e4e7;
+  font-family: "Rubik", sans-serif;
+  font-family: "Space Mono", monospace;
 }
 
-input {
-  background: #f3f3f3;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  margin: 0 !important;
+  display: none !important;
+  visibility: hidden;
+}
+
+input:focus-visible {
+  outline: solid 2px #26c2ae !important;
+}
+
+input:hover,
+button:hover {
+  cursor: pointer;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #5e7a7d;
 }
 
 .calculator {
@@ -12,8 +35,32 @@ input {
   transform: translateY(-50%);
 }
 
-.calc-totals-section {
-  background-color: #00474b;
+.invalid-input {
+  border: 2px solid red !important;
+}
+
+.invalid-input-message {
+  position: absolute;
+  right: 0;
+}
+
+/* ==== INPUT SECTION ==== */
+
+.tip-btn {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.tip-btn:hover,
+#submitBtn:hover {
+  background-color: #9fe8df;
+}
+
+input {
+  background-color: #f3f9fa;
+  font-size: 24px;
+  color: #00474b;
+  font-weight: bold;
 }
 
 .tip-btn {
@@ -24,4 +71,61 @@ input {
 .tip-btn,
 #tip-btn-group input {
   flex-shrink: 1;
+}
+
+.calc-inputs-section .card-label,
+.number-people-input .card-label {
+  position: relative;
+}
+
+.bill-total-input:after {
+  content: "";
+  background: url("/images/icon-dollar.svg") no-repeat;
+  width: 5%;
+  height: 100%;
+  left: 5%;
+  top: 55%;
+  position: absolute;
+}
+
+.number-people-input:after {
+  content: "";
+  background: url("/images/icon-person.svg") no-repeat;
+  width: 5%;
+  height: 100%;
+  left: 5%;
+  top: 55%;
+  position: absolute;
+}
+
+.selected {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+/* ==== TOTALS ==== */
+
+.calc-totals-section {
+  background-color: #00474b;
+}
+
+.calc-totals-section span {
+  color: #7f9d9f;
+}
+
+.calc-total {
+  font-size: 48px;
+  color: #26c2ae;
+  font-weight: bold;
+}
+
+#resetBtn,
+#submitBtn {
+  background-color: #26c2ae;
+  color: #00474b;
+  font-size: 20px;
+}
+
+.selection-warning {
+  border: 1px solid red;
 }
