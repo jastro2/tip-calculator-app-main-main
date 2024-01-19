@@ -80,7 +80,7 @@ input {
 
 .bill-total-input:after {
   content: "";
-  background: url("/images/icon-dollar.svg") no-repeat;
+  background: url("images/icon-dollar.svg") no-repeat;
   width: 5%;
   height: 100%;
   left: 5%;
@@ -90,7 +90,7 @@ input {
 
 .number-people-input:after {
   content: "";
-  background: url("/images/icon-person.svg") no-repeat;
+  background: url("images/icon-person.svg") no-repeat;
   width: 5%;
   height: 100%;
   left: 5%;
